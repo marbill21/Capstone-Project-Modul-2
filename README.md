@@ -24,3 +24,7 @@ didokumentasikan dalam file Jupyter Notebook, story yang dibuat pada Tableau Pub
 
 <hr>
 
+## Project Presentation
+Slide 1
+![Crime_in_Boston](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_1.png)
+- Topik yang saya dapatkan untuk mengerjakan Capstone Project Modul 2 ini adalah Crime in Boston
