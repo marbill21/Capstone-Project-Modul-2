@@ -46,50 +46,69 @@ Slide 4
 
 Slide 5
 ![Columns](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_5.png)
-- Dalam dataset ini, kolom-kolom yang terdapat didalamnya dapat dijabarkan sebagai berikut:
-    - Kolom `Incident Number`: merupakan angka unik untuk setiap insiden, namun nomor yang sama akan dipakai untuk merepresentasikan beberapa respon polisi di dalam 1 kejadian. Maka, `Incident Number` digabung dengan `Offense Code` sehingga setiap angka unik dari kombinasi ini akan merepresentasikan 1 respon spesifik dari polisi terhadap 1 kejadian spesifik di lapangan.
-    - Kategori Offense Code: dijabarkan melalui kolom `Code` (kode unik untuk setiap jenis respon polisi), `Name` (deskripsi singkat), `Group` (kategori tipe tindak kriminal yang terjadi), dan `Description` (deskripsi lengkap).
-    - Kategori Crime Location: dijabarkan melalui kolom `District` yang berisi kode distrik. Kolom ini kemudian menjadi basis ditambahkannya kolom sintetis untuk menampung nama distrik dari setiap nomor distrik. Kemudian, ada angka unik berupa `Reporting Area` dan `Street Name` yang sulit untuk dikaitkan dengan kolom lainnya. Selain itu, dengan adanya kolom `Location` beserta kolom `Longitude` dan `Latitude` yang bisa langsung menunjukkan secara spesifik lokasi insiden di peta, maka relevansi kolom `Reporting Area` dan `Street Name` pun berkurang dan menyebabkan kolom ini tidak digunakan untuk analisa.
-    - Kategori Crime Details: berisi inti dari dipakainya sistem pencatatan ini oleh polisi, yaitu untuk mencatat waktu secara lengkap dari tanggal, bulan, tahun, jam, menit, dan detik dari setiap pelaporan. Kemudian ada juga kolom `Shooting` yang mengindikasikan apakah terjadi penembakan dalam insiden tersebut. Lalu ada pula kolom Uniform Crime Reporting (UCR) Part yang mengkategorisasi setiap tindakan polisi kepada 4 Part yang berbeda dan akan dilaporkan kepada satuan keamanan yang berbeda.
+- Dalam dataset ini, kolom-kolom yang berada di dalamnya dapat dijabarkan sebagai berikut:
+    - Kolom `INCIDENT_NUMBER` merupakan nomor unik untuk setiap insiden yang terjadi di Kota Boston. Sedangkan `OFFENSE_CODE` merupakan Kode untuk kelompok jenis pelanggaran. Kedua kolom ini kemudian dikombinasikan untuk menjadi Index data terbaru mewakili setiap insiden dan jenis pelanggaran yang terjadi di Kota Boston.
+    - Offense Detail: terdiri atas kolom `OFFENSE_CODE` (Kode untuk kelompok jenis pelanggaran), `OFFENSE_CODE_GROUP` (Nama kelompok kode jenis pelanggaran), dan `OFFENSE_DESCRIPTION` (Deskripsi pelanggaran yang terjadi).
+    - Incident Location: terdiri atas kolom `DISTRICT` (Kode distrik terjadinya suatu insiden), `DISTRICT_NAME` (Nama distrik terjadinya suatu insiden), dan `Location` (Koordinat (garis lintang, garis bujur) dari lokasi terjadinya suatu insiden).
+    - Incident Details: terdiri atas kolom `DATE` (Tanggal terjadinya suatu insiden), `TIME` (waktu terjadinya suatu insiden), `SHOOTING` (N - Tidak terjadi insiden penembakan, Y - Terjadi insiden penembakan), dan `UCR_PART` (Ranking jenis pelanggaran paling serius per insiden).
+    - Unutilized Column: kolom yang dieliminasi atau tidak dipakai. Terdiri atas kolom `REPORTING_AREA` (Kode area pelaporan suatu insiden) dan `STREET` (Nama jalan terjadinya suatu insiden). Kedua kolom ini tidak bisa dihubungkan dengan data pada kolom lain sehingga menjadi tidak relevan.
 
+Slide 6
+![Background](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_6.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_6.png
+Slide 7
+![Problem_Statements](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_7.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_7.png
+Slide 8
+![Insights&Recommmendation](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_8.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_8.png
+Slide 9
+![I&R_1a](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_9.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_9.png
+Slide 10
+![I&R_1b](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_10.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_10.png
+Slide 11
+![I&R_2a](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_11.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_11.png
+Slide 12
+![I&R_2b](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_12.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_12.png
+Slide 13
+![I&R_3a](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_13.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_13.png
+Slide 14
+![I&R_3b](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_14.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_14.png
+Slide 15
+![I&R_4a](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_15.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_15.png
+Slide 16
+![I&R_4b](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_16.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_16.png
+Slide 17
+![I&R_5a](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_17.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_17.png
+Slide 18
+![I&R_5b](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_18.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_18.png
+Slide 19
+![I&R_6a](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_19.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_19.png
+Slide 20
+![I&R_6b](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_20.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_20.png
+Slide 21
+![I&R_6c](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_21.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_21.png
+Slide 22
+![I&R_6d](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_22.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_22.png
+Slide 23
+![Conclusion](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_23.png)
 
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_23.png
-
-https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_24.png
+Slide 24
+![Thank_You](https://github.com/marbill21/Capstone-Project-Modul-2/blob/main/Images/Slide_24.png)
 
 
 
